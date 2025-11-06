@@ -176,3 +176,11 @@ response_defaults:
 response_defaults:
   inline_output: true            # агент печатает результат прямо в чате
   show_summary: false            # не заменяет текст коротким “Summary”
+trend_enrichment:
+  connect_with:
+    - "Instagram trending sounds and captions"
+    - "Telegram discussions about баланс/выгорание/ресурс"
+  update_logic:
+    - "Раз в неделю собирать 5 свежих инсайтов"
+    - "Адаптировать под фразы Насти — без клише и пафоса"
+    - "Добавлять цитаты и мини-наблюдения, чтобы посты чувствовались 'живыми из дня'"
