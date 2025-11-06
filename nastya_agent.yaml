@@ -57,6 +57,21 @@ output_formats:
         - "одна простая задача утром"
         - "вода + дыхание"
         - "вечер без самоедства"
+  - name: "daily_ideas"
+    structure: ["date","seed_topics","ideas","notes"]
+    rules:
+      count: 5
+      mix: ["проблема→решение","сцена/кадр","мини-совет","вопрос к читателю","сторис-цепочка"]
+      tone: "разговорно, по-дружески, без пафоса"
+      use_trends: true
+
+  - name: "weekly_content_plan"
+    structure: ["week","focus","calendar"]
+    rules:
+      days: 7
+      include_platforms: ["instagram","telegram","stories/reels"]
+      per_day: ["hook/headline","angle","format","call_to_action"]
+      source_mix: ["trend_advisor","problems_seed","last_posts_context"]
 
   - name: "instagram_post"
     structure: ["title","hook","story","insight","cta","hashtags"]
