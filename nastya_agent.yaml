@@ -117,3 +117,15 @@ headline_research:
 response_defaults:
   inline_output: true            # всегда печатать результат в чате
   show_summary: false            # не подменять ответ "Summary"-сообщением
+- name: "headline_pack"
+  structure: ["seed_topic", "platform", "tone", "headlines", "notes"]
+  rules:
+    count: 10
+    render: "inline_markdown_list"   # печатать списком в ответе
+    also_save_to: "outputs/headline_pack_{seed_topic}_{platform}.md"  # сохранять файл
+    max_length:
+      instagram: "до 60–75 символов"
+      telegram: "до 90–110 символов"
+    tone: "разговорно, без пафоса, с лёгкой самоиронией"
+    avoid: ["гарантирую","навсегда","успех любой ценой","жми срочно"]
+    adapt_to_brand: "система с душой, 'спасаю одно', 'простота — тоже роскошь'"
