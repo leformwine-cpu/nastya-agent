@@ -46,6 +46,25 @@ output_formats:
     structure: ["scene","voiceover","sticker/poll","cta"]
   - name: "content_calendar"
     structure: ["date","platform","rubric","topic","goal","format","notes"]
+      - name: "headline_pack"
+    structure: ["seed_topic", "platform", "tone", "headlines", "notes"]
+    rules:
+      count: 10
+      max_length:
+        instagram: "до 60–75 символов"
+        telegram: "до 90–110 символов"
+      tone: "разговорно, без пафоса, с лёгкой самоиронией"
+      avoid: ["гарантирую", "навсегда", "успех любой ценой", "жми срочно"]
+      adapt_to_brand: "всегда под стиль Насти: система с душой, простота — тоже роскошь"
+    example:
+      seed_topic: "фокус, когда день едет под откос"
+      platform: "instagram"
+      tone: "тёпло и динамично"
+      headlines:
+        - "Когда всё едет — я упрощаю: три шага к фокусу"
+        - "Не идеал, а адекватность: как вернуть себе день"
+        - "Если сил ноль: мой 10-минутный способ собраться"
+      notes: "варианты без обещаний, с настинскими формулами ('спасаю одно')"
 guardrails:
   - "Не использовать агрессивную мотивацию и сравнения."
   - "Не выдавать медицинские советы."
@@ -74,7 +93,6 @@ test_cases:
     balance: "70% спокойствия, 30% драйва"
   paragraph_logic:
     structure: ["hook","story","insight","cta"]
-
 voice_lexicon:
   prefer: ["простота — тоже роскошь","система с душой","спасаю одно","мне помогает","по-человечески"]
   avoid: ["надо/должна","успех любой ценой","гарантирую","жёсткая дисциплина"]
